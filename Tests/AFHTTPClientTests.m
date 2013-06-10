@@ -52,7 +52,7 @@
 - (void)testReachabilityStatus {
     [Expecta setAsynchronousTestTimeout:5.0];
 
-    expect(self.client.networkReachabilityStatus).to.equal(@(AFNetworkReachabilityStatusUnknown));
+    expect(self.client.networkReachabilityStatus).toNot.equal(@(AFNetworkReachabilityStatusUnknown));
 
     __block AFNetworkReachabilityStatus reachabilityStatus = self.client.networkReachabilityStatus;
 
